@@ -77,8 +77,10 @@ function initModals() {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-modal');
       const modal = document.getElementById('modal-' + id);
-      if (modal) modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false'); 
+      if (modal) {
+        modal.classList.add('show');
+        modal.setAttribute('aria-hidden', 'false'); 
+      }
     });
   });
 
@@ -86,7 +88,7 @@ function initModals() {
   document.querySelectorAll('.modal').forEach(m => {
     m.addEventListener('click', () => {
       m.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
+      m.setAttribute('aria-hidden', 'true');
     });
   });
 
@@ -106,7 +108,6 @@ function initModals() {
     });
   });
 }
-
 document.addEventListener('DOMContentLoaded', initModals);
 
 // =============================
@@ -132,5 +133,28 @@ function initLightbox() {
     });
   });
 }
-
 document.addEventListener('DOMContentLoaded', initLightbox);
+
+// =============================
+// YouTube API
+// =============================
+(function() {
+  // injeta script da API
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+
+  var player;
+  window.onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('player', {
+      videoId: 'wYLdAZtFsg8', // ID do vídeo
+      playerVars: {
+        autoplay: 0,
+        controls: 1,
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1
+      }
+    });
+  };
+})();
