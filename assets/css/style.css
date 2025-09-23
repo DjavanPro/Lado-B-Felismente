@@ -583,13 +583,10 @@ body {
     height: 400px; /* Altura reduzida para mobile */
     object-fit: cover; /* Garante que a imagem preencha o espaço */
   }
-  
-  img, video {
-    max-width: 100%;
-    height: 400px;
-    display: block;
-    overflow-x: hidden;
-    object-fit: cover;
+  .gallery img {
+    width: 100%;
+  height: 440px;
+  object-fit: cover;
   }
   .gallery2 img {
     width: 100%;
