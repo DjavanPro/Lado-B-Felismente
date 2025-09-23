@@ -13,6 +13,11 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
 .allpage {
   max-width: 1200px;
@@ -560,6 +565,11 @@ body {
     object-fit: cover; /* Garante que a imagem preencha o espaço */
   }
   
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
   
   .card2 img {
     height: 400px; /* Altura reduzida para mobile */
@@ -576,8 +586,9 @@ body {
     font-size: 1rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   body {
+     overflow-x: hidden;
     background: url("../img/fundo2.png") no-repeat top center/cover;
     background-position: top center;
   }
