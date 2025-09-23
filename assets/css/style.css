@@ -578,28 +578,44 @@ body {
   font-size: 1.2rem;
 }
 
+/* ========================================================================== */
+/* Melhorias Gerais e Responsividade para Mobile (até 768px)       */
+/* ========================================================================== */
+
 @media (max-width: 768px) {
-  .card img {
-    height: 400px; /* Altura reduzida para mobile */
-    object-fit: cover; /* Garante que a imagem preencha o espaço */
+  /* --- Imagem de Fundo do Body --- */
+  body {
+    overflow-x: hidden;
+    background-image: url("../img/fundo2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
   }
-  .gallery img {
-    width: 100%;
-  height: 440px;
-  object-fit: cover;
+
+  /* --- Imagens dos Cards e Galerias --- */
+  .card,
+  .gallery,
+  .gallery2,
+  .card2 {
+    display: grid;
+    /* Faz as colunas se ajustarem automaticamente.
+       Cada coluna terá no mínimo 250px de largura e se expandirá para preencher o espaço disponível. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 15px; /* Adiciona um espaçamento nas laterais */
   }
-  .gallery2 img {
-    width: 100%;
-  height: 440px;
-  object-fit: cover;
-  text-align: center;
-  object-fit: cover;
-}
-  
+
+  .card img,
+  .gallery img,
+  .gallery2 img,
   .card2 img {
-    height: 400px; /* Altura reduzida para mobile */
-    object-fit: cover;
+    width: 100%;
+    height: 400px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-radius: 8px; /* Adiciona bordas arredondadas (opcional) */
   }
+  
+  /* --- Outras Melhorias Existentes --- */
   .agenda-list {
     max-width: 90%;
     padding: 15px;
@@ -611,22 +627,10 @@ body {
     font-size: 1rem;
   }
   .video-wrapper {
-  width: 100%;
-  height: 80%;
-  margin: 2rem 0;
-  text-align: center;
-}
-}
-@media (max-width: 768px) {
-  body {
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-     overflow-x: hidden;
-    background: url("../img/fundo2.png") no-repeat top center/cover;
-    background-position: top center;
+    width: 100%;
+    height: 80%;
+    margin: 2rem 0;
+    text-align: center;
   }
   .agenda-list li {
     font-size: 0.9rem;
@@ -634,9 +638,45 @@ body {
   .agenda-note {
     font-size: 0.9rem;
   }
+  .footer {
+    background: url("../img/fundo4.png") no-repeat center center/cover;
+    background-attachment: scroll;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-column:first-child,
+  .footer-column:nth-child(2),
+  .footer-column:last-child {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 0 auto 15px;
+  }
+  .footer-apoio {
+    margin-top: 20px;
+  }
+  .section, .section-alt, .section-narrow {
+    padding: 40px 0;
+  }
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+  .lead {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+  .video-frame {
+    max-width: 100%;
+  }
 }
 
-/* ===== Menu Overlay para mobile ===== */
+/* ========================================================================== */
+/* Menu Overlay para Mobile (até 860px)                        */
+/* ========================================================================== */
 @media (max-width: 860px) {
   .nav-toggle {
     display: block;
@@ -650,7 +690,6 @@ body {
     cursor: pointer;
     z-index: 1001;
   }
-
   .nav-menu {
     position: fixed;
     top: 0;
@@ -670,37 +709,33 @@ body {
     z-index: 999;
     padding: 80px 24px 24px;
   }
-
   .nav-menu.show {
     opacity: 1;
     visibility: visible;
   }
-
   .nav-menu a {
     font-size: 1.4rem;
     padding: 12px 24px;
     border-radius: 8px;
     transition: background 0.3s ease;
   }
-
   .nav-menu a:hover {
     background: rgba(255, 255, 255, 0.1);
   }
-
   .nav-toggle.active .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
-
   .nav-toggle.active .bar:nth-child(2) {
     opacity: 0;
   }
-
   .nav-toggle.active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
 }
 
-/* Footer no mobile */
+/* ========================================================================== */
+/* Footer no Mobile (até 768px)                                */
+/* ========================================================================== */
 @media (max-width: 768px) {
   .footer {
     background: url("../img/fundo4.png") no-repeat center center/cover;
@@ -711,48 +746,19 @@ body {
     gap: 30px;
     text-align: center;
   }
-
   .footer-column:first-child,
   .footer-column:nth-child(2),
   .footer-column:last-child {
     align-items: center;
     text-align: center;
   }
-
   .footer-logo {
     margin: 0 auto 15px;
   }
-  
   .footer-apoio {
     margin-top: 20px;
   }
 }
-
-/* MELHORIAS GERAIS PARA MOBILE */
-@media (max-width: 768px) {
-  .section, .section-alt, .section-narrow {
-    padding: 40px 0;
-  }
-
-  .hero h1 {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-  }
-
-  .lead {
-    font-size: 0.95rem;
-    padding: 0 15px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .video-frame {
-    max-width: 100%;
-  }
-}
-
 .no-scroll {
   overflow: hidden;
 }
