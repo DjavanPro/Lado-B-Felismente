@@ -392,7 +392,7 @@ body {
 
 .video-wrapper {
   width: 100%;
-  height: 80%;
+  height: 100%;
   margin: 2rem 0;
   text-align: center;
 }
@@ -591,7 +591,21 @@ body {
     background-size: cover;
     background-position: top center;
   }
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* Mantém a proporção 16:9 (altura de 56.25% da largura) */
+    height: 0;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
 
+  #player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   /* --- Imagens dos Cards e Galerias --- */
   .card,
   .gallery,
