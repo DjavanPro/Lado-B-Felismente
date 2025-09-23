@@ -77,10 +77,8 @@ function initModals() {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-modal');
       const modal = document.getElementById('modal-' + id);
-      if (modal) {
-        modal.classList.add('show');
-        modal.setAttribute('aria-hidden', 'false'); 
-      }
+      if (modal) modal.classList.add('show');
+      modal.setAttribute('aria-hidden', 'false'); 
     });
   });
 
@@ -88,7 +86,7 @@ function initModals() {
   document.querySelectorAll('.modal').forEach(m => {
     m.addEventListener('click', () => {
       m.classList.remove('show');
-      m.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('aria-hidden', 'true');
     });
   });
 
@@ -108,6 +106,7 @@ function initModals() {
     });
   });
 }
+
 document.addEventListener('DOMContentLoaded', initModals);
 
 // =============================
@@ -133,6 +132,7 @@ function initLightbox() {
     });
   });
 }
+
 document.addEventListener('DOMContentLoaded', initLightbox);
 
 // =============================
@@ -158,3 +158,4 @@ document.addEventListener('DOMContentLoaded', initLightbox);
     });
   };
 })();
+
