@@ -55,7 +55,7 @@ Meu **primeiro trabalho publicado** na área de desenvolvimento web.
 
 ## 🌐 Acesse o site
 
-➡ **[https://O-LadoB-Oficial.github.io/Lado-B-Felismente/](https://O-LadoB-Oficial.github.io/Lado-B-Felismente/)**
+➡ **[https://DjavanPro.github.io/Lado-B-Felismente/](https://DjavanPro.github.io/Lado-B-Felismente/)**
 
 ---
 
