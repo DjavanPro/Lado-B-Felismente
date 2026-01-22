@@ -1,7 +1,7 @@
 <h1 align="center">O Lado B F(Elis)mente – Landing Page</h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Djavanpro7/show-musical/main/assets/img/banner1.png" alt="Banner do show" width="800"/>
+  <img src="https://raw.githubusercontent.com/Djavanpro7/LADO-B-FELISMENTE/main/assets/img/banner1.png" alt="Banner do show" width="800"/>
 </p>
 
 <p align="center">
