@@ -1,5 +1,10 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/djavan83/public_html/
-    - /bin/cp -R assets js *.html $DEPLOYPATH
+    - /bin/cp -R assets /home/djavan83/public_html/
+    - /bin/cp -R js /home/djavan83/public_html/
+    - /bin/cp index.html /home/djavan83/public_html/
+    - /bin/cp gizelly-em-imagens.html /home/djavan83/public_html/
+    - /bin/cp midia.html /home/djavan83/public_html/
+    - /bin/cp o-lado-b.html /home/djavan83/public_html/
+    - /bin/cp programa.html /home/djavan83/public_html/
