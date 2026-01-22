@@ -2,10 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/djavan83/public_html/
-    - /bin/rsync -av \
-        --exclude='.git' \
-        --exclude='.github' \
-        --exclude='README.md' \
-        --exclude='RELEASE.md' \
-        --exclude='.cpanel.yml' \
-        ./ $DEPLOYPATH
+    - /bin/cp -R assets js *.html $DEPLOYPATH
